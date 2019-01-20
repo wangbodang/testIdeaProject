@@ -12,6 +12,8 @@ public class MainControllerServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("\n===> 转到login.jsp");
+        String url = req.getRequestURL().toString();
+        System.out.println("\n===>请求路径:"+url);
         req.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(req, resp);
     }
 }
